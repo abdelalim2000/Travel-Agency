@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+h1,
+.logo {
+  font-family: "Amiri", serif;
+  font-weight: normal;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+p,
+a {
+  font-family: "Montserrat";
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-bg,
+.social,
+.pagination {
+  position: absolute;
+}
+.social {
+  display: none;
+}
+header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+
+  ul {
+    display: none;
+  }
+}
+.main-bg {
+  background: url("../images/trees-on-mountain-3551227.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 40%;
+  height: 900px;
+  z-index: -1;
+  right: 0;
+}
+
+.main-content {
+  padding: 9em 4em 9em 3em;
+
+  h1 {
+    font-size: 2.5em;
+    line-height: 1em;
+  }
+  p {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    padding-left: 20%;
+    padding-top: 1em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 2.5em;
+      width: 20%;
+      background: #f1ede2;
+      margin-top: 0.3em;
+    }
+  }
+}
+footer {
+  width: 85%;
+  height: 8em;
+  background: #23383b;
+  display: flex;
+  position: relative;
+
+  .travel {
+    width: 8em;
+    height: 8em;
+    background: url("../images/hot-air-balloons-in-the-sky-3879070.jpg")
+      no-repeat;
+    background-size: cover;
+  }
+  .cta {
+    color: white;
+    align-self: center;
+    position: relative;
+    display: inline-block;
+    margin: 3em auto;
+    padding: 1em;
+    white-space: nowrap;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 63%;
+      height: 3em;
+      left: 0em;
+      top: 0em;
+      border: 1px solid white;
+    }
+  }
+  .block {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background: #335257;
+  }
+  .one {
+    right: 2em;
+  }
+  .two {
+    right: 0;
+    top: 2em;
+  }
+}
+ul.pagination {
+  z-index: 1;
+  background: white;
+  right: 0;
+  top: 30%;
+
+  li {
+    padding: 1em 1.5em 1.5em 1em;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border: 1px solid #919191;
+      border-radius: 50%;
+    }
+  }
+  .active::before {
+    content: "";
+    background: black;
+  }
+}
+
+@media (min-width: 550px) {
+  body {
+    font-size: 18px;
+  }
+  .menu {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+
+    li a {
+      color: black;
+      display: block;
+      padding: 0.3em 0.8em;
+      font-size: 0.9em;
+    }
+  }
+  .social {
+    display: unset;
+    z-index: 1;
+    left: 1.5em;
+    top: 30%;
+    text-align: center;
+    li {
+      margin-bottom: 2em;
+      img {
+        width: 20px;
+      }
+      &:last-child img {
+        width: 10px;
+      }
+    }
+  }
+  .main-content {
+    padding: 9em 4em 7em 6em;
+
+    p::before {
+      width: 25%;
+    }
+  }
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+  .main-content {
+    padding: 7em 4em 7em 8em;
+
+    p {
+      width: 70%;
+    }
+  }
+  footer {
+    width: 75%;
+  }
+  .social,
+  ul.pagination {
+    top: 17%;
+  }
+  footer {
+    height: 12em;
+  }
+  .travel {
+    width: 12em !important;
+    height: 12em !important;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    font-size: 25px;
+  }
+  .main-content {
+    padding: 7em 4em 7em 10em;
+
+    p {
+      width: 50%;
+    }
+  }
+}
+@media (min-width: 1400px) {
+    .main-bg{
+        right: 10%;
+    }
+    footer{
+        width:60%;
+        margin-left: 5em;
+    }
+    header{
+        width: 90%;
+        margin: auto;
+    }
+    .social{
+        left: 5em;
+    }
+    
+}
